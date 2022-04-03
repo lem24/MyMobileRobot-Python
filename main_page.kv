@@ -1,0 +1,53 @@
+<pages1>:
+    canvas:
+        Rectangle:
+            pos: self.center_x , 0
+            size: 10,self.height
+
+        Rectangle:
+            pos:  0,self.center_y
+            size: self.width,10
+
+    Button:
+        id: "label03"
+        size_hint: (None, None)
+        text: "center"
+        on_press: root.open_popup()
+
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y: 'top'
+        Button:
+            id: "label01"
+            size_hint: (None, None)
+            text: "1"
+            background_normal:
+            background_down:
+            on_press: root.manager.current = 'one'
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y: 'top'
+        Button:
+            id: "label02"
+            size_hint: (None, None)
+            text: "2"
+            on_press: root.manager.current = 'two'
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y: 'bottom'
+        Button:
+            id: "label03"
+            size_hint: (None, None)
+            text: "3"
+            on_press: root.manager.current = 'three'
+
+
+<MyPopup>:
+    id:pop
+    size_hint: .5, .5
+    auto_dismiss: False
+    title: 'control panels'
+
+    Button:
+        text: 'Welcome to my code'
+        on_press: pop.dismiss()

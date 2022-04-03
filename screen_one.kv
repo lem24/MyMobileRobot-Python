@@ -1,0 +1,41 @@
+<Screen_One>
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Screen One"
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Button:
+            id: "sc1"
+            text: "Home"
+            #size_hint: (None, None)
+            on_press: root.manager.current = 'home'
+    GridLayout:
+        cols:4
+        rows:8
+        Label:
+            text: ""
+            size_hint: (None,None)
+        Label:
+            text: ""
+            size_hint: (None,None)
+        Label:
+            text: ""
+            size_hint: (None,None)
+        Label:
+            text: ""
+            size_hint: (None,None)
+        Button:
+            text: "grid0"
+            size_hint: (None,None)
+        Button:
+            text: "grid1"
+            size_hint: (None,None)
